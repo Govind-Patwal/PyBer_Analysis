@@ -157,7 +157,7 @@ Below were some of the outcomes of the analysis
 
     The total amount of fare collected in Urban cities was $39,854, which was almost 2.1 times the amount collected in Suburban cities, and 9.2 times the total fare collected in rural cities.
 
-    **Image 3 (below) : Total amount of fare collected for each city type**
+    **Image 3 (below) : Total number of fare collected for each city type**
 ![Total amount of fares for each city type](./analysis/total_amount_of_fares_for_each_city_type.png)
 
 4. ### Average fare per ride for each city type
@@ -173,9 +173,16 @@ Below were some of the outcomes of the analysis
     **Image 5 (below) : Average fare per driver for each city type**
 ![Average fare per driver for each city type](./analysis/average_fare_per_driver_for_each_city_type.png)
 
-6. ### The line chart - total Fare by city Type from Jan 1, 2019 to End of April, 2019
-    The graph shows
+6. ### Total weekly fare by city type from Jan 1, 2019 to near the end of April, 2019
 
+    The graph revealed the following    
+    1. Urban cities always had a higher weekly fare than Suburban citeis, which in turn always had higher weekly fare than the Rural cities.
+    2. The peak weekly fare of Rural cities is $500, while that of Suburban cities is around $1,500 and that of Urban cities is around $2,500.
+    3. The most consistent statistics are from Rural cities, with a range of $500, Suburban cities have a range of around $650, and Urban cities with a range as $800.
+    3. The 3rd week of February shows an uptick in the weekly fares across the board.
+    4. The last week of February shows a drop in weekly fares across the board.
+
+    **Image 6 (below) : ATotal weekly fare by city type from Jan 1, 2019 to near the end of April, 2019**
 ![Total Fare by city Type from 2019/01/01 to 2019/04/28](./analysis/PyBer_fare_summary_till_20190428.png)
 
 ## Summary
