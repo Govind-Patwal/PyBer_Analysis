@@ -24,40 +24,40 @@ I now have a new assignment from V. Isualize. I have to create a summary DataFra
 
 ## Analysis Steps
 1.  In Step 1, I used the groupby() function to create a Series of data that had the name of the city as the index, then applied the count() method to the "ride_id" column.
-`total_rides = pyber_data_df.groupby(["type"]).count()["ride_id"]`
+    `total_rides = pyber_data_df.groupby(["type"]).count()["ride_id"]`
 
 2. In Step 2, I used the groupby() function to create a Series of data that had the name of the city as the index, then applied the sum() method to the "driver_count" column.
-`total_drivers = city_data_df.groupby(["type"]).sum()["driver_count"]`
+    `total_drivers = city_data_df.groupby(["type"]).sum()["driver_count"]`
 
-3. In Step 3, I used the groupby() function to create a Series of data that had the name of the city as the index, then applied the sum() method to the "fare" column.
-`sum_of_fare_by_city_type = pyber_data_df.groupby(["type"]).sum()["fare"]`
+3. In Step 3, I used the groupby() function to create a Series of data that had the name of the city as the index, then applied the sum() method to the "fare" column.  
+    `sum_of_fare_by_city_type = pyber_data_df.groupby(["type"]).sum()["fare"]`
 
 4. In Step 4, I calculated the average fare per ride by city type by dividing the sum of all the fares by the total rides.
-`city_type_average_fare_per_ride = sum_of_fare_by_city_type / total_rides`
+    `city_type_average_fare_per_ride = sum_of_fare_by_city_type / total_rides`
 
 5. In Step 5, I calculated the average fare per driver by city type by dividing the sum of all the fares by the total drivers.
-`city_type_average_fare_per_driver = sum_of_fare_by_city_type / total_drivers`
+    `city_type_average_fare_per_driver = sum_of_fare_by_city_type / total_drivers`
 
 6. In Step 6, I created a PyBer summary DataFrame with all the data gathered from Steps 1-5, using the column names shown in the module challenge.
-```
-pyber_summary_df = pd.DataFrame({
+    ```
+    pyber_summary_df = pd.DataFrame({
     "Total Rides":total_rides,
     "Total Drivers":total_drivers,
     "Total Fares":sum_of_fare_by_city_type,
     "Average Fare Per Ride":city_type_average_fare_per_ride,
     "Average Fare Per Driver": city_type_average_fare_per_driver})
-```
+    ```
 7.  In Step 7, I used the provided code snippet to remove the index name ("type") from the PyBer summary DataFrame. 
-`pyber_summary_df.index.name = None`
+    `pyber_summary_df.index.name = None`
 
 8. In Step 8, I formatted the columns of the Pyber summary DataFrame to look the oens given in the challenge.
-```
-pyber_summary_df["Total Rides"] = pyber_summary_df["Total Rides"].map("{:,}".format)
-pyber_summary_df["Total Drivers"] = pyber_summary_df["Total Drivers"].map("{:,}".format)
-pyber_summary_df["Total Fares"] = pyber_summary_df["Total Fares"].map("${:,.2f}".format)
-pyber_summary_df["Average Fare Per Ride"] = pyber_summary_df["Average Fare Per Ride"].map("${:,.2f}".format)
-pyber_summary_df["Average Fare Per Driver"] = pyber_summary_df["Average Fare Per Driver"].map("${:,.2f}".format)
-```
+    ```
+    pyber_summary_df["Total Rides"] = pyber_summary_df["Total Rides"].map("{:,}".format)
+    pyber_summary_df["Total Drivers"] = pyber_summary_df["Total Drivers"].map("{:,}".format)
+    pyber_summary_df["Total Fares"] = pyber_summary_df["Total Fares"].map("${:,.2f}".format)
+    pyber_summary_df["Average Fare Per Ride"] = pyber_summary_df["Average Fare Per Ride"].map("${:,.2f}".format)
+    pyber_summary_df["Average Fare Per Driver"] = pyber_summary_df["Average Fare Per Driver"].map("${:,.2f}".format)
+    ```
 
 9. In Step 9, I created a new DataFrame with multiple indices using the groupby() function on the "type" and "date" columns of the pyber_data_df DataFrame, then applied the sum() method on the "fare" column to show the total fare amount for each date.
 `total_fare_per_day_per_city = pd.DataFrame(pyber_data_df.groupby(["type", "date"]).sum()["fare"])`
