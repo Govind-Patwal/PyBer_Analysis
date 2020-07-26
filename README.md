@@ -178,11 +178,11 @@ Below were some of the outcomes of the analysis
     The graph revealed the following    
     1. Urban cities always had a higher weekly fare than Suburban citeis, which in turn always had higher weekly fare than the Rural cities.
     2. The peak weekly fare of Rural cities is $500, while that of Suburban cities is around $1,500 and that of Urban cities is around $2,500.
-    3. The most consistent statistics are from Rural cities, with a range of $500, Suburban cities have a range of around $650, and Urban cities with a range as $800.
+    3. The weekly fares have been most consistent for Rural cities, with a range of $500, Suburban cities have a range of around $650, and Urban cities with a range as $800.
     3. The 3rd week of February shows an uptick in the weekly fares across the board.
     4. The last week of February shows a drop in weekly fares across the board.
 
-    **Image 6 (below) : ATotal weekly fare by city type from Jan 1, 2019 to near the end of April, 2019**
+    **Image 6 (below) : Total weekly fare by city type from Jan 1, 2019 to near the end of April, 2019**
 ![Total Fare by city Type from 2019/01/01 to 2019/04/28](./analysis/PyBer_fare_summary_till_20190428.png)
 
 ## Summary
