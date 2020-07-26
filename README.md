@@ -115,7 +115,7 @@ I now have a new assignment from V. Isualize. I have to create a summary DataFra
     plt.savefig("analysis/PyBer_fare_summary.png")
     plt.show()
     ```
-17. Since my chart was not mathcing the one provided in the module challenge, I experimented with the dates and found with my chart will match the chart in the module if I choose the date range as 2019/01/01 - 2019/04/28 (ending 1 day earlier). My codee for that graph is 
+17. Since my chart was not mathcing the one provided in the module challenge, I experimented with the dates and found with my chart will match the chart in the module if I choose the date range as 2019/01/01 - 2019/04/28 (ending 1 day earlier). My code for that graph is 
 
     ```
     total_fare_between_2019_01_01_and_2019_04_28 = total_fare_pivot.loc['2019-01-01':'2019-04-28']
@@ -139,17 +139,23 @@ I now have a new assignment from V. Isualize. I have to create a summary DataFra
 
 Below were some of the outcomes of the analysis
 
-1. Total number of rides for each type of city - Urban Cities had by far the most number of rides. The total number of rides for Urban cities was 1,626, which was 2.6 times the rides in suburban cities, and 13 timees the number in rural cities.
+1. ### Total number of rides for each type of city
+
+    Urban Cities had by far the most number of rides. The total number of rides for Urban cities was 1,626, which was 2.6 times the rides in suburban cities, and 13 times the number in rural cities.
 
     **Image 1 (below) : Total number of rides for each city type**
 ![Total rides for each city type](./analysis/total_rides_for_each_city_type.png)
 
-2. Total number of drivers for each city type - completing the comparitively large number rides in Urban cities were 2,405 drivers, this is 4.9 times the number in suburban cities and 30.8 times the number in rural cities.
+2. ### Total number of drivers for each city type
+
+    Completing the comparitively large number rides in Urban cities were 2,405 drivers, this is 4.9 times the number in suburban cities and 30.8 times the number in rural cities.
 
     **Image 2 (below) : Total number of drivers for each city type**
 ![Total drivers for each city type](./analysis/total_drivers_for_each_city_type.png)
 
-3. Total amount of fare for each city type - The total amount of fare collected in Urban cities was $39,854, which was almost 2.1 times the amount collected in Suburban cities, and 9.2 times of the total fare collected in rural cities.
+3. ***Total amount of fare for each city type*** 
+
+    The total amount of fare collected in Urban cities was $39,854, which was almost 2.1 times the amount collected in Suburban cities, and 9.2 times of the total fare collected in rural cities.
 
     **Image 3 (below) : Total number of fare collected for each city type**
 ![Total amount of fares for each city type](./analysis/total_amount_of_fares_for_each_city_type.png)
