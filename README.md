@@ -24,18 +24,23 @@ I now have a new assignment from V. Isualize. I have to create a summary DataFra
 
 ## Analysis Steps
 1.  In Step 1, I used the groupby() function to create a Series of data that had the name of the city as the index, then applied the count() method to the "ride_id" column.
+
     `total_rides = pyber_data_df.groupby(["type"]).count()["ride_id"]`
 
 2. In Step 2, I used the groupby() function to create a Series of data that had the name of the city as the index, then applied the sum() method to the "driver_count" column.
+
     `total_drivers = city_data_df.groupby(["type"]).sum()["driver_count"]`
 
 3. In Step 3, I used the groupby() function to create a Series of data that had the name of the city as the index, then applied the sum() method to the "fare" column.  
+
     `sum_of_fare_by_city_type = pyber_data_df.groupby(["type"]).sum()["fare"]`
 
 4. In Step 4, I calculated the average fare per ride by city type by dividing the sum of all the fares by the total rides.
+
     `city_type_average_fare_per_ride = sum_of_fare_by_city_type / total_rides`
 
 5. In Step 5, I calculated the average fare per driver by city type by dividing the sum of all the fares by the total drivers.
+
     `city_type_average_fare_per_driver = sum_of_fare_by_city_type / total_drivers`
 
 6. In Step 6, I created a PyBer summary DataFrame with all the data gathered from Steps 1-5, using the column names shown in the module challenge.
@@ -48,6 +53,7 @@ I now have a new assignment from V. Isualize. I have to create a summary DataFra
     "Average Fare Per Driver": city_type_average_fare_per_driver})
     ```
 7.  In Step 7, I used the provided code snippet to remove the index name ("type") from the PyBer summary DataFrame. 
+
     `pyber_summary_df.index.name = None`
 
 8. In Step 8, I formatted the columns of the Pyber summary DataFrame to look the oens given in the challenge.
@@ -60,66 +66,75 @@ I now have a new assignment from V. Isualize. I have to create a summary DataFra
     ```
 
 9. In Step 9, I created a new DataFrame with multiple indices using the groupby() function on the "type" and "date" columns of the pyber_data_df DataFrame, then applied the sum() method on the "fare" column to show the total fare amount for each date.
-`total_fare_per_day_per_city = pd.DataFrame(pyber_data_df.groupby(["type", "date"]).sum()["fare"])`
+
+    `total_fare_per_day_per_city = pd.DataFrame(pyber_data_df.groupby(["type", "date"]).sum()["fare"])`
 
 10. In Step 10, I used the provided code snippet to reset the index. This was needed to use the pivot() function in Step 11.
-`total_fare_per_day_per_city = total_fare_per_day_per_city.reset_index()`
+
+    `total_fare_per_day_per_city = total_fare_per_day_per_city.reset_index()`
 
 11. In Step 11, I used the pivot() function to convert the DataFrame from Step 10 so that the index is the "date," each column is a city "type," and the values are the "fare."
-`total_fare_pivot = total_fare_per_day_per_city.pivot(index='date',columns='type', values='fare')  `
+
+    `total_fare_pivot = total_fare_per_day_per_city.pivot(index='date',columns='type', values='fare')  `
 
 12. In Step 12, I created a new DataFrame by using the loc method on the following date range: 2019-01-01 through 2019-04-29.
-`total_fare_between_2019_01_01_and_2019_04_29 = total_fare_pivot.loc['2019-01-01':'2019-04-29']`
+
+    `total_fare_between_2019_01_01_and_2019_04_29 = total_fare_pivot.loc['2019-01-01':'2019-04-29']`
 
 13. In Step 13, I used the provided code snippet to reset the index of the DataFrame from Step 12 to a datetime data type. This was necessary to use the resample() method in Step 15.
-`total_fare_between_2019_01_01_and_2019_04_29.index = pd.to_datetime(total_fare_between_2019_01_01_and_2019_04_29.index)`
+
+    `total_fare_between_2019_01_01_and_2019_04_29.index = pd.to_datetime(total_fare_between_2019_01_01_and_2019_04_29.index)`
 
 14. In Step 14, I used the provided code snippet, df.info(), to check that the "date" is a datetime data type.
-`total_fare_between_2019_01_01_and_2019_04_29.info()`
+
+    `total_fare_between_2019_01_01_and_2019_04_29.info()`
 
 15. In Step 15, I created a new DataFrame by applying the resample() function to the DataFrame I modified in Step 13. I resampled the data in weekly bins, then applied the sum() method to get the total fares for each week.
-`sum_of_fare_by_weeks = total_fare_between_2019_01_01_and_2019_04_29.resample("W").sum()`
+
+    `sum_of_fare_by_weeks = total_fare_between_2019_01_01_and_2019_04_29.resample("W").sum()`
 
 16. Finally, in Step 16, I graphed the resampled DataFrame from Step 15 using the object-oriented interface method and the df.plot() method, as well as the Matplotlib "fivethirtyeight" graph style code snippet provided in the starter code. I annotated the y-axis label and the title, then use the appropriate code to save the figure as PyBer_fare_summary.png in my "analysis" folder.
-```
-# Import the style from Matplotlib.
-from matplotlib import style
-# Use the graph style fivethirtyeight.
-style.use('fivethirtyeight')
 
-#Plotting sum_of_fare_by_weeks per city type uisng the Object-Oriented approach
-ax = sum_of_fare_by_weeks.plot(figsize=(20,10))
+    ```
+    # Import the style from Matplotlib.
+    from matplotlib import style
+    # Use the graph style fivethirtyeight.
+    style.use('fivethirtyeight')
 
-#Set axis 
-ax.set_title("Total Fare by City Type", fontsize = "20")
-ax.set_xlabel("Date", fontsize = "16")
-ax.set_ylabel("Fare($USD)", fontsize = "16")
-ax.grid(True)
+    #Plotting sum_of_fare_by_weeks per city type uisng the Object-Oriented approach
+    ax = sum_of_fare_by_weeks.plot(figsize=(20,10))
 
-ax.legend(["Rural","Suburban", "Urban", ], title="type", loc="center", fontsize="15", mode="Expanded")
+    #Set axis 
+    ax.set_title("Total Fare by City Type", fontsize = "20")
+    ax.set_xlabel("Date", fontsize = "16")
+    ax.set_ylabel("Fare($USD)", fontsize = "16")
+    ax.grid(True)
 
-plt.savefig("analysis/PyBer_fare_summary.png")
-plt.show()
-```
+    ax.legend(["Rural","Suburban", "Urban", ], title="type", loc="center", fontsize="15", mode="Expanded")
+
+    plt.savefig("analysis/PyBer_fare_summary.png")
+    plt.show()
+    ```
 17. Since my chart was not mathcing the one provided in the module challenge, I experimented with the dates and found with my chart will match the chart in the module if I choose the date range as 2019/01/01 - 2019/04/28 (ending 1 day earlier). My codee for that graph is 
-```
-total_fare_between_2019_01_01_and_2019_04_28 = total_fare_pivot.loc['2019-01-01':'2019-04-28']
-total_fare_between_2019_01_01_and_2019_04_28.index = pd.to_datetime(total_fare_between_2019_01_01_and_2019_04_28.index)
-sum_of_fare_by_weeks = total_fare_between_2019_01_01_and_2019_04_28.resample("W").sum()
 
-# Use the graph style fivethirtyeight.
-style.use('fivethirtyeight')
-#Plotting each category
-ax = sum_of_fare_by_weeks.plot(figsize=(20,10))
-#Set axis 
-ax.set_title("Total Fare by City Type", fontsize = "20")
-ax.set_xlabel("Date", fontsize = "16")
-ax.set_ylabel("Fare($USD)", fontsize = "16")
-ax.grid(True)
-ax.legend(["Rural","Suburban", "Urban", ], title="type", loc="center", fontsize="15", mode="Expanded")
-plt.savefig("analysis/PyBer_fare_summary_till_20190428.png")
-plt.show()
-```
+    ```
+    total_fare_between_2019_01_01_and_2019_04_28 = total_fare_pivot.loc['2019-01-01':'2019-04-28']
+    total_fare_between_2019_01_01_and_2019_04_28.index = pd.to_datetime(total_fare_between_2019_01_01_and_2019_04_28.index)
+    sum_of_fare_by_weeks = total_fare_between_2019_01_01_and_2019_04_28.resample("W").sum()
+
+    # Use the graph style fivethirtyeight.
+    style.use('fivethirtyeight')
+    #Plotting each category
+    ax = sum_of_fare_by_weeks.plot(figsize=(20,10))
+    #Set axis 
+    ax.set_title("Total Fare by City Type", fontsize = "20")
+    ax.set_xlabel("Date", fontsize = "16")
+    ax.set_ylabel("Fare($USD)", fontsize = "16")
+    ax.grid(True)
+    ax.legend(["Rural","Suburban", "Urban", ], title="type", loc="center", fontsize="15", mode="Expanded")
+    plt.savefig("analysis/PyBer_fare_summary_till_20190428.png")
+    plt.show()
+    ```
 ## Analysis Results
 
 Below were some of the outcomes of the analysis
