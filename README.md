@@ -139,7 +139,7 @@ I now have a new assignment from V. Isualize. I have to create a summary DataFra
 
 Below were some of the outcomes of the analysis
 
-1. ### Total number of rides for each type of city
+1. ### Total number of rides for each type of city  
 
     Urban Cities had by far the most number of rides. The total number of rides for Urban cities was 1,626, which was 2.6 times the rides in suburban cities, and 13 times the number in rural cities.
 
@@ -153,24 +153,29 @@ Below were some of the outcomes of the analysis
     **Image 2 (below) : Total number of drivers for each city type**
 ![Total drivers for each city type](./analysis/total_drivers_for_each_city_type.png)
 
-3. ***Total amount of fare for each city type*** 
+3. ### Total amount of fare for each city type
 
     The total amount of fare collected in Urban cities was $39,854, which was almost 2.1 times the amount collected in Suburban cities, and 9.2 times of the total fare collected in rural cities.
 
     **Image 3 (below) : Total number of fare collected for each city type**
 ![Total amount of fares for each city type](./analysis/total_amount_of_fares_for_each_city_type.png)
 
-4. Average fare per ride for each city type - Urban cities, at $24.53, has the lowest average fare per ride, which was 0.79 times of the average fare in Suburban cities, and 0.70 times the average fare per ride in Rural cities.
+4. ### Average fare per ride for each city type
+
+    Urban cities, at $24.53, has the lowest average fare per ride, which was 0.79 times of the average fare in Suburban cities, and 0.70 times the average fare per ride in Rural cities.
 
     **Image 4 (below) : Average fare per ride for each city type**
 ![Average fare per ride for each city type](./analysis/average_fare_per_ride_for_each_city_type.png)
 
-5. Average fare per driver for each city type - Urban cities, at $16.57, has the lowest average fare per driver, which was 0.42 times of the average fare in Suburban cities, and 0.30 times the average fare per driver in Rural cities.
+5. ### Average fare per driver for each city type 
+    Urban cities, at $16.57, has the lowest average fare per driver, which was 0.42 times of the average fare in Suburban cities, and 0.30 times the average fare per driver in Rural cities.
 
     **Image 5 (below) : Average fare per driver for each city type**
 ![Average fare per driver for each city type](./analysis/average_fare_per_driver_for_each_city_type.png)
 
-6. The line chart - total Fare by city Type from Jan 1, 2019 to End of April, 2019
+6. ### The line chart - total Fare by city Type from Jan 1, 2019 to End of April, 2019
+    The graph shows
+
 ![Total Fare by city Type from 2019/01/01 to 2019/04/28](./analysis/PyBer_fare_summary_till_20190428.png)
 
 ## Summary
