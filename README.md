@@ -157,7 +157,7 @@ Below were some of the outcomes of the analysis
 
     The total amount of fare collected in Urban cities was $39,854, which was almost 2.1 times the amount collected in Suburban cities, and 9.2 times the total fare collected in rural cities.
 
-    **Image 3 (below) : Total number of fare collected for each city type**
+    **Image 3 (below) : Total amount of fare collected for each city type**
 ![Total amount of fares for each city type](./analysis/total_amount_of_fares_for_each_city_type.png)
 
 4. ### Average fare per ride for each city type
