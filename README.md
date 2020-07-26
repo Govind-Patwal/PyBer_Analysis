@@ -96,71 +96,75 @@ ax.set_xlabel("Date", fontsize = "16")
 ax.set_ylabel("Fare($USD)", fontsize = "16")
 ax.grid(True)
 
-
 ax.legend(["Rural","Suburban", "Urban", ], title="type", loc="center", fontsize="15", mode="Expanded")
 
 plt.savefig("analysis/PyBer_fare_summary.png")
 plt.show()
 ```
+17. Since my chart was not mathcing the one provided in the module challenge, I experimented with the dates and found with my chart will match the chart in the module if I choose the date range as 2019/01/01 - 2019/04/28 (ending 1 day earlier). My codee for that graph is 
+```
+total_fare_between_2019_01_01_and_2019_04_28 = total_fare_pivot.loc['2019-01-01':'2019-04-28']
+total_fare_between_2019_01_01_and_2019_04_28.index = pd.to_datetime(total_fare_between_2019_01_01_and_2019_04_28.index)
+sum_of_fare_by_weeks = total_fare_between_2019_01_01_and_2019_04_28.resample("W").sum()
 
-
-***Output for dates between 2019/01/01 to 2019/04/29***
-![Output for dates between 2019/01/01 to 2019/04/29](./analysis/PyBer_fare_summary.png)
-
-
-***Output for dates between 2019/01/01 to 2019/04/28***
-![Output for dates between 2019/01/01 to 2019/04/28](./analysis/PyBer_fare_summary_till_20190428.png)
-
+# Use the graph style fivethirtyeight.
+style.use('fivethirtyeight')
+#Plotting each category
+ax = sum_of_fare_by_weeks.plot(figsize=(20,10))
+#Set axis 
+ax.set_title("Total Fare by City Type", fontsize = "20")
+ax.set_xlabel("Date", fontsize = "16")
+ax.set_ylabel("Fare($USD)", fontsize = "16")
+ax.grid(True)
+ax.legend(["Rural","Suburban", "Urban", ], title="type", loc="center", fontsize="15", mode="Expanded")
+plt.savefig("analysis/PyBer_fare_summary_till_20190428.png")
+plt.show()
+```
 ## Analysis Results
-Results: Using images from the summary DataFrame and multiple-line chart, describe the differences in ride-sharing data among the different city types.
+
+Below were some of the outcomes of the analysis
+
+1. Total number of rides for each type of city - Urban Cities had by far the most number of rides. The total number of rides for Urban cities was 1,626, which was 2.6 times the rides in suburban cities, and 13 timees the number in rural cities.
+
+    **Image 1 (below) : Total number of rides for each city type**
+![Total rides for each city type](./analysis/total_rides_for_each_city_type.png)
+
+2. Total number of drivers for each city type - completing the comparitively large number rides in Urban cities were 2,405 drivers, this is 4.9 times the number in suburban cities and 30.8 times the number in rural cities.
+
+    **Image 2 (below) : Total number of drivers for each city type**
+![Total drivers for each city type](./analysis/total_drivers_for_each_city_type.png)
+
+3. Total amount of fare for each city type - The total amount of fare collected in Urban cities was $39,854, which was almost 2.1 times the amount collected in Suburban cities, and 9.2 times of the total fare collected in rural cities.
+
+    **Image 3 (below) : Total number of fare collected for each city type**
+![Total amount of fares for each city type](./analysis/total_amount_of_fares_for_each_city_type.png)
+
+4. Average fare per ride for each city type - Urban cities, at $24.53, has the lowest average fare per ride, which was 0.79 times of the average fare in Suburban cities, and 0.70 times the average fare per ride in Rural cities.
+
+    **Image 4 (below) : Average fare per ride for each city type**
+![Average fare per ride for each city type](./analysis/average_fare_per_ride_for_each_city_type.png)
+
+5. Average fare per driver for each city type - Urban cities, at $16.57, has the lowest average fare per driver, which was 0.42 times of the average fare in Suburban cities, and 0.30 times the average fare per driver in Rural cities.
+
+    **Image 5 (below) : Average fare per driver for each city type**
+![Average fare per driver for each city type](./analysis/average_fare_per_driver_for_each_city_type.png)
+
+6. The line chart - total Fare by city Type from Jan 1, 2019 to End of April, 2019
+![Total Fare by city Type from 2019/01/01 to 2019/04/28](./analysis/PyBer_fare_summary_till_20190428.png)
 
 ## Summary
-Summary: Based on the results, provide three business recommendations to the CEO for addressing any disparities among the city types.vxnxn
+Summary: Based on the results, provide three business recommendations to the CEO for addressing any disparities among the city types.
 
-================================================================
-
-Deliverable 3: A written report for the PyBer analysis (20 points)
-Deliverable 3 Instructions
-Use your repository README file to write your analysis of how to address any disparities in the ride-sharing data among the city types.
-
-The analysis should contain the following:
-
-Overview of the analysis: Explain the purpose of the new analysis.
-
-Results: Using images from the summary DataFrame and multiple-line chart, describe the differences in ride-sharing data among the different city types.
-
-Summary: Based on the results, provide three business recommendations to the CEO for addressing any disparities among the city types.vxnxn
-
-================================================================
-
-Deliverable 3 Requirements
-Structure, Organization, and Formatting (6 points)
-
-The written analysis has the following structure, organization, and formatting:
-
-There is a title, and there are multiple sections. (2 pt)
-
-Each section has a heading and subheading. (2 pt)
-
-Links to images are working and displayed correctly. (2 pt)
-
-=========================
-
-Analysis (14 points)
-The written analysis has the following:
-
-Overview of the analysis:
-The purpose of the new analysis is well defined. (3 pt)
-
-Results:
-There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include 
-1. the total rides, 
-2. total drivers, 
-3. total fares, 
-4. average fare per ride and driver, and 
-5. total fare by city type. (7 pt)
-
-Summary:
 There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types. (4 pt)
+
+
+
+
+1.
+
+2.
+
+3.
+
 
 ================================================================
