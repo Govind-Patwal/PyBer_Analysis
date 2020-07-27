@@ -179,8 +179,8 @@ Below were some of the outcomes of the analysis
     1. Urban cities always had a higher weekly fare than Suburban citeis, which in turn always had higher weekly fare than the Rural cities.
     2. The peak weekly fare of Rural cities is $500, while that of Suburban cities is around $1,500 and that of Urban cities is around $2,500.
     3. The weekly fares have been most consistent for Rural cities, with a range of around $500, Suburban cities with a range of around $650, and Urban cities with a range of around $800.
-    3. The 3rd week of February shows an uptick in the weekly fares across the board.
-    4. The last week of February shows a drop in weekly fares across the board.
+    3. The 4th week of February shows an uptick in the weekly fares across the board.
+    4. The 1st week of March shows a drop in weekly fares across the board.
 
     **Image 6 (below) : Total weekly fare by city type from Jan 1, 2019 to near the end of April, 2019**
 ![Total Fare by city Type from 2019/01/01 to 2019/04/28](./analysis/PyBer_fare_summary_till_20190428.png)
@@ -193,4 +193,6 @@ Below are some recommendations that I would like to make
 
 2) **Suburban-city segment** - This segment, at 30%, contributes significantly to the revenues of PyBer, although less as compared to the Urban city segment. That being said, it is more profitable than the Urban city segment - with higher fare/ride as well as higher fare/driver. This can be attributed to lesser number of competitors, lower sales and marketing costs, lesser driver salaries, etc. Since it looks the competition is not as fierce as in the Urban-car segment, PyBer should focus its Sales and Marketing efforts to expand its market share in this segment.
 
-3) **Rural-city segment** - this segment, at 7%, contributes significantly lesser as compared to the other segments. That being said, it is the most profitable in terms of fare/ride as well as fare/driver. It can be suggested that it is a new market and has 1-2 players or that the people are more willing to pay higher fares because of some reasons. In any case, PyBer should be focusing its Sales and Marketing efforts to be the leader in this segment.
+3) **Rural-city segment** - This segment, at 7%, contributes significantly lesser as compared to the other segments. That being said, it is the most profitable in terms of fare/ride as well as fare/driver. It can be suggested that it is a new market and has 1-2 players or that the people are more willing to pay higher fares because of some reasons. In any case, PyBer should be focusing its Sales and Marketing efforts to be the leader in this segment.
+
+4) **Bonus Suggestion** - I would also recommend PyBer to manage its human resources in such a way that they are fully staffed in the 4th week of February, this is when the weekly fares (thus the weekly rides) peak across all segments. PyBer can also keep in mind that the next week, i.e. Week 1 of March sees a drastic drop in fares (and this in rides).
