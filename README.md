@@ -115,7 +115,7 @@ I now have a new assignment from V. Isualize. I have to create a summary DataFra
     plt.savefig("analysis/PyBer_fare_summary.png")
     plt.show()
     ```
-17. Since my chart was not mathcing the one provided in the module challenge, I experimented with the dates and found with my chart will match the chart in the module if I choose the date range as 2019/01/01 - 2019/04/28 (ending 1 day earlier). My code for that graph is 
+17. Since my chart was not mathcing the one provided in the module challenge, I experimented with the dates and found that my chart will match the chart in the module if I chose the date range as '2019/01/01':'2019/04/28'(ending 1 day earlier). My code for that graph was 
 
     ```
     total_fare_between_2019_01_01_and_2019_04_28 = total_fare_pivot.loc['2019-01-01':'2019-04-28']
@@ -157,7 +157,7 @@ Below were some of the outcomes of the analysis
 
     The total amount of fare collected in Urban cities was $39,854, which was almost 2.1 times the amount collected in Suburban cities, and 9.2 times the total fare collected in rural cities.
 
-    **Image 3 (below) : Total number of fare collected for each city type**
+    **Image 3 (below) : Total amount of fare collected for each city type**
 ![Total amount of fares for each city type](./analysis/total_amount_of_fares_for_each_city_type.png)
 
 4. ### Average fare per ride for each city type
@@ -191,8 +191,8 @@ Below are some recommendations that I would like to make
 
 1) **Urban-city segment** - This segment, at 63%, commands a lion's share of the revenue of PyBer. Which means it is essential to the sustainability of PyBer. At the same time, it also seems that this segment is somehow saturated. The fare/ride and fare/drivers are the lowest as compared to other segments. This can be attributed to many players and thus very tough competition, high marketing costs, high driver salaries, etc. PyBer must focus its Sales and marketing efforts to retain its market share in this segment.
 
-2) **Suburban-city segment** - This segment, at 30%, contributes significantly to the revenues of PyBer, although less as compared to the Urban city segment. That being said, it is more profitable than the Urban city segment - with higher fare/ride as well as higher fare/driver. This can be attributed to lesser number of competitors, lower sales and marketing costs, lesser driver salaries, etc. Since it looks the competition is not as fierce as in the Urban-car segment, PyBer should focus its Sales and Marketing efforts to expand its market share in this segment.
+2) **Suburban-city segment** - This segment, at 30%, contributes significantly to the revenues of PyBer, although less as compared to the Urban city segment. That being said, it is more profitable than the Urban-city segment - with higher fare/ride as well as higher fare/driver. This can be attributed to lesser number of competitors, lower sales and marketing costs, lesser driver salaries, etc. Since it looks the competition is not as fierce as in the Urban-car segment, PyBer should focus its Sales and Marketing efforts to expand its market share in this segment.
 
-3) **Rural-city segment** - This segment, at 7%, contributes significantly lesser as compared to the other segments. That being said, it is the most profitable in terms of fare/ride as well as fare/driver. It can be suggested that it is a new market and has 1-2 players or that the people are more willing to pay higher fares because of some reasons. In any case, PyBer should be focusing its Sales and Marketing efforts to be the leader in this segment.
+3) **Rural-city segment** - This segment, at 7%, contributes significantly lesser as compared to the other segments. That being said, it is the most profitable in terms of fare/ride as well as fare/driver, which is almost 3.3 times of the Urban segment!. It can be suggested that it is a new market and has 1-2 players or that people in this segment are more willing to pay higher fares because of some reasons. In any case, PyBer should be focusing its Sales and Marketing efforts to be the leader in this segment.
 
-4) **Bonus Suggestion** - I would also recommend PyBer to manage its human resources in such a way that they are fully staffed in the 4th week of February, this is when the weekly fares (thus the weekly rides) peak across all segments. PyBer can also keep in mind that the next week, i.e. Week 1 of March sees a drastic drop in fares (and this in rides).
+4) **Bonus Recommendation** - I would also recommend PyBer to manage its human resources in a way that they are fully staffed in the 4th week of February, this is when the weekly fares (thus the weekly rides) peak across all segments. PyBer can also keep in mind that the next week, i.e. Week 1 of March sees a drastic drop in fares (and this in rides).
